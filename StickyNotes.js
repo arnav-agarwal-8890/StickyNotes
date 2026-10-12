@@ -1,4 +1,4 @@
-let body = document.querySelector("body")
+let body = document.getElementById("main-body")
 body.style.display = "flex"
 body.style.fontFamily = "Arial"
 body.style.flexDirection = "column"
@@ -8,6 +8,7 @@ body.style.position = "relative"
 
 
 let container = document.createElement("div")
+container.id = "main-container"
 container.style.background = "#f1f1f1"
 container.style.borderRadius = "25px"
 container.style.boxShadow = "0px 2px 5px lightgray"
@@ -23,7 +24,7 @@ body.appendChild(container)
 
 
 let heading = document.createElement("div")
-heading.id = "Heading"
+heading.id = "main-heading"
 heading.textContent = "Sticky Notes"
 heading.style.fontFamily = 'DM Serif'
 heading.style.textAlign = "center"
@@ -47,6 +48,7 @@ container.appendChild(notesList)
 
 
 let inputContainer = document.createElement("div")
+inputContainer.id = "input-container"
 inputContainer.style.position = "relative"
 inputContainer.style.display = "flex"
 inputContainer.style.flexDirection = "column"
@@ -59,7 +61,6 @@ container.appendChild(inputContainer)
 
 let textarea = document.createElement("textarea")
 textarea.id = "text-area"
-
 textarea.placeholder = "Type a new note..."
 textarea.style.fontFamily = "Arial"
 textarea.style.color = "#000000"
